@@ -50,7 +50,7 @@ app.get('/weather',(req,res)=>{
       forecast(lat,long,(error,data)=>{
          res.send({
           location,
-          weather_forecast:data.wf
+          weather_forecast:data
          })
         })
     })

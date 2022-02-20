@@ -9,9 +9,8 @@ const forecast=(lat,long,callback)=>{
             callback('Unable to find location', undefined)
         }
         callback(undefined,
-            {ctemp:body.current.temperature,
-            wf:body.current.weather_descriptions[0]
-        })
+            "It is currently "+body.current.temperature+" degrees outside."+
+            "Weather is "+body.current.weather_descriptions[0])
 })
 }
 module.exports=forecast
